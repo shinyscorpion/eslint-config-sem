@@ -65,6 +65,13 @@ module.exports = {
     ],
     'no-eval': 'error',
     'no-eq-null': 'error',
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1,
+        maxEOF: 1
+      }
+    ],
     'no-shadow': [
       'error'
     ],
@@ -86,6 +93,10 @@ module.exports = {
       'error',
       'always'
     ],
+    'padded-blocks': [
+      'error',
+      'never'
+    ],
     'quotes': [
       'error',
       'single'
@@ -102,9 +113,21 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     'padding-line-between-statements': [
       'error',
+      // Declarations
       { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
-      { blankLine: 'always', prev: ['if', 'for'], next: '*' },
-      { blankLine: 'never', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] }
+      { blankLine: 'never', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+      { blankLine: 'always', prev: ['multiline-block-like', 'multiline-expression'], next: ['const', 'let', 'var'] },
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: ['multiline-block-like', 'multiline-expression'] },
+      // Expressions
+      { blankLine: 'always', prev: 'expression', next: '*' },
+      { blankLine: 'any', prev: 'expression', next: 'expression', },
+      { blankLine: 'always', prev: ['multiline-block-like', 'multiline-expression'], next: 'expression', },
+      { blankLine: 'always', prev: 'expression', next: ['multiline-block-like', 'multiline-expression'] },
+      // Switches
+      { blankLine: 'always', prev: ['while', 'if', 'for', 'switch'], next: '*' },
+      // Return
+      { blankLine: 'always', prev: 'return', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'return' },
     ]
   }
 };
