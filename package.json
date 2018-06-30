@@ -1,0 +1,17 @@
+{
+  "name": "eslint-config-sem",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "OnlineDev Backend",
+  "peerDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^5.0.1",
+    "eslint-plugin-react": "^7.10.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "eslint": "^5.0.1",
+    "eslint-plugin-react": "^7.10.0"
+  }
+}
