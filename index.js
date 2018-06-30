@@ -93,6 +93,10 @@ module.exports = {
       'error',
       'always'
     ],
+    'object-shorthand': [
+      'error',
+      'never'
+    ],
     'padded-blocks': [
       'error',
       'never'
