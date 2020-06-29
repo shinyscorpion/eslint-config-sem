@@ -70,7 +70,7 @@ module.exports = {
     'no-useless-return': 'error',
     'no-var': 'error',
     'object-curly-spacing': ['error', 'always'],
-    'object-shorthand': ['error', 'never'],
+    'object-shorthand': ['error', 'always'],
     'padded-blocks': ['error', 'never'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
